@@ -1,0 +1,572 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9FC0601C-B1DF-4DD4-8381-11F7C049FE89}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GlassProject</RootNamespace>
+    <AssemblyName>GlassProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44391</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CustomerModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CustomerModel.edmx</DependentUpon>
+      <LastGenOutput>CustomerModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="CustomerModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CustomerModel.edmx</DependentUpon>
+      <LastGenOutput>CustomerModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Global.asax" />
+    <Content Include="Images\1stimage.jpg" />
+    <Content Include="Images\2ndphoto.jpg" />
+    <Content Include="Images\3rdphoto.jpg" />
+    <Content Include="Images\bgimage.jpg" />
+    <Content Include="Images\CSMIT.png" />
+    <Content Include="Images\fancy mandir\Fancy-Mandir %281%29.jpg" />
+    <Content Include="Images\fancy mandir\Fancy-Mandir %2810%29.jpg" />
+    <Content Include="Images\fancy mandir\Fancy-Mandir %282%29.jpg" />
+    <Content Include="Images\fancy mandir\Fancy-Mandir %283%29.jpg" />
+    <Content Include="Images\fancy mandir\Fancy-Mandir %284%29.jpg" />
+    <Content Include="Images\fancy mandir\Fancy-Mandir %285%29.jpg" />
+    <Content Include="Images\fancy mandir\Fancy-Mandir %286%29.jpg" />
+    <Content Include="Images\fancy mandir\Fancy-Mandir %287%29.jpg" />
+    <Content Include="Images\fancy mandir\Fancy-Mandir %288%29.jpg" />
+    <Content Include="Images\fancy mandir\Fancy-Mandir %289%29.jpg" />
+    <Content Include="Images\Front\images%281%29.jpeg" />
+    <Content Include="Images\Front\images%282%29.jpeg" />
+    <Content Include="Images\Front\images%283%29.jpeg" />
+    <Content Include="Images\Front\images%284%29.jpeg" />
+    <Content Include="Images\Front\images%285%29.jpeg" />
+    <Content Include="Images\Front\images.jpeg" />
+    <Content Include="Images\glasatlast\AnarkaliGlass\images %285%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\AnarkaliGlass\images %285%29.jpeg" />
+    <Content Include="Images\glasatlast\BaajriGlass\images%281%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\BaajriGlass\images%281%29.jpeg" />
+    <Content Include="Images\glasatlast\BaajriGlass\images%282%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\BaajriGlass\images%282%29.jpeg" />
+    <Content Include="Images\glasatlast\BaajriGlass\images%283%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\BaajriGlass\images%283%29.jpeg" />
+    <Content Include="Images\glasatlast\BaajriGlass\images%284%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\BaajriGlass\images%284%29.jpeg" />
+    <Content Include="Images\glasatlast\BaajriGlass\images-tn.jpeg" />
+    <Content Include="Images\glasatlast\BaajriGlass\images.jpeg" />
+    <Content Include="Images\glasatlast\BlackGlass\images%281%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\BlackGlass\images%281%29.jpeg" />
+    <Content Include="Images\glasatlast\BlackGlass\images%282%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\BlackGlass\images%282%29.jpeg" />
+    <Content Include="Images\glasatlast\BlackGlass\images%283%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\BlackGlass\images%283%29.jpeg" />
+    <Content Include="Images\glasatlast\BlackGlass\images%283%292-tn.jpeg" />
+    <Content Include="Images\glasatlast\BlackGlass\images%283%292.jpeg" />
+    <Content Include="Images\glasatlast\BlackGlass\images%284%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\BlackGlass\images%284%29.jpeg" />
+    <Content Include="Images\glasatlast\BlackGlass\images%285%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\BlackGlass\images%285%29.jpeg" />
+    <Content Include="Images\glasatlast\BlackGlass\Welding-Black-Glass-tn.jpg" />
+    <Content Include="Images\glasatlast\BlackGlass\Welding-Black-Glass.jpg" />
+    <Content Include="Images\glasatlast\blackmirrors\download %282%29.jpeg" />
+    <Content Include="Images\glasatlast\blackmirrors\download %283%29.jpeg" />
+    <Content Include="Images\glasatlast\blackmirrors\download %284%29.jpeg" />
+    <Content Include="Images\glasatlast\blackmirrors\images.jpeg" />
+    <Content Include="Images\glasatlast\BrownGlass\images%281%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\BrownGlass\images%281%29.jpeg" />
+    <Content Include="Images\glasatlast\BrownGlass\images%282%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\BrownGlass\images%282%29.jpeg" />
+    <Content Include="Images\glasatlast\BrownGlass\images-tn.jpeg" />
+    <Content Include="Images\glasatlast\BrownGlass\images.jpeg" />
+    <Content Include="Images\glasatlast\BrownGlass\images2-tn.jpeg" />
+    <Content Include="Images\glasatlast\BrownGlass\images2.jpeg" />
+    <Content Include="Images\glasatlast\brownmirror\images%281%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\brownmirror\images%281%29.jpeg" />
+    <Content Include="Images\glasatlast\brownmirror\images%282%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\brownmirror\images%282%29.jpeg" />
+    <Content Include="Images\glasatlast\brownmirror\images%283%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\brownmirror\images%283%29.jpeg" />
+    <Content Include="Images\glasatlast\brownmirror\images%284%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\brownmirror\images%284%29.jpeg" />
+    <Content Include="Images\glasatlast\brownmirror\images-tn.jpeg" />
+    <Content Include="Images\glasatlast\brownmirror\images.jpeg" />
+    <Content Include="Images\glasatlast\design glad\images %281%29.jpeg" />
+    <Content Include="Images\glasatlast\design glad\images %282%29.jpeg" />
+    <Content Include="Images\glasatlast\design glad\images %283%29.jpeg" />
+    <Content Include="Images\glasatlast\design glad\images %284%29.jpeg" />
+    <Content Include="Images\glasatlast\design glad\images.jpeg" />
+    <Content Include="Images\glasatlast\ExtraclearGlass\images%281%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\ExtraclearGlass\images%281%29.jpeg" />
+    <Content Include="Images\glasatlast\ExtraclearGlass\images%282%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\ExtraclearGlass\images%282%29.jpeg" />
+    <Content Include="Images\glasatlast\ExtraclearGlass\images%283%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\ExtraclearGlass\images%283%29.jpeg" />
+    <Content Include="Images\glasatlast\ExtraclearGlass\images%284%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\ExtraclearGlass\images%284%29.jpeg" />
+    <Content Include="Images\glasatlast\ExtraclearGlass\images-tn.jpeg" />
+    <Content Include="Images\glasatlast\ExtraclearGlass\images.jpeg" />
+    <Content Include="Images\glasatlast\FancyGlassMandir\images%282%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\FancyGlassMandir\images%282%29.jpeg" />
+    <Content Include="Images\glasatlast\FancyGlassMandir\images%283%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\FancyGlassMandir\images%283%29.jpeg" />
+    <Content Include="Images\glasatlast\FancyGlassMandir\images%284%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\FancyGlassMandir\images%284%29.jpeg" />
+    <Content Include="Images\glasatlast\FancyGlassMandir\images%285%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\FancyGlassMandir\images%285%29.jpeg" />
+    <Content Include="Images\glasatlast\FancyGlassMandir\images%286%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\FancyGlassMandir\images%286%29.jpeg" />
+    <Content Include="Images\glasatlast\FancyGlassMandir\images%287%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\FancyGlassMandir\images%287%29.jpeg" />
+    <Content Include="Images\glasatlast\FancyGlassMandir\images%288%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\FancyGlassMandir\images%288%29.jpeg" />
+    <Content Include="Images\glasatlast\FancyMirror\Images%281%29-tn.jpg" />
+    <Content Include="Images\glasatlast\FancyMirror\Images%281%29.jpg" />
+    <Content Include="Images\glasatlast\FancyMirror\Images%282%29-tn.jpg" />
+    <Content Include="Images\glasatlast\FancyMirror\Images%282%29.jpg" />
+    <Content Include="Images\glasatlast\FancyMirror\Images%283%29-tn.jpg" />
+    <Content Include="Images\glasatlast\FancyMirror\Images%283%29.jpg" />
+    <Content Include="Images\glasatlast\FancyMirror\Images%284%29-tn.jpg" />
+    <Content Include="Images\glasatlast\FancyMirror\Images%284%29.jpg" />
+    <Content Include="Images\glasatlast\FancyMirror\Images%285%29-tn.jpg" />
+    <Content Include="Images\glasatlast\FancyMirror\Images%285%29.jpg" />
+    <Content Include="Images\glasatlast\FancyMirror\Images%286%29-tn.jpg" />
+    <Content Include="Images\glasatlast\FancyMirror\Images%286%29.jpg" />
+    <Content Include="Images\glasatlast\figure glass\images.jpeg" />
+    <Content Include="Images\glasatlast\FishTank\images%282%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\FishTank\images%282%29.jpeg" />
+    <Content Include="Images\glasatlast\FishTank\images%283%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\FishTank\images%283%29.jpeg" />
+    <Content Include="Images\glasatlast\FishTank\images%284%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\FishTank\images%284%29.jpeg" />
+    <Content Include="Images\glasatlast\FishTank\images%285%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\FishTank\images%285%29.jpeg" />
+    <Content Include="Images\glasatlast\FishTank\images%286%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\FishTank\images%286%29.jpeg" />
+    <Content Include="Images\glasatlast\furniture glass\images %282%29.jpeg" />
+    <Content Include="Images\glasatlast\furniture glass\images %283%29.jpeg" />
+    <Content Include="Images\glasatlast\furniture glass\images %284%29.jpeg" />
+    <Content Include="Images\glasatlast\furniture glass\images %285%29.jpeg" />
+    <Content Include="Images\glasatlast\furniture glass\images.jpeg" />
+    <Content Include="Images\glasatlast\glass partition\images %281%29.jpeg" />
+    <Content Include="Images\glasatlast\glass partition\images %282%29.jpeg" />
+    <Content Include="Images\glasatlast\glass partition\images %283%29.jpeg" />
+    <Content Include="Images\glasatlast\glass partition\images %284%29.jpeg" />
+    <Content Include="Images\glasatlast\glass partition\images.jpeg" />
+    <Content Include="Images\glasatlast\GlassTable\images%282%29.jpeg" />
+    <Content Include="Images\glasatlast\GlassTable\images%283%29.jpeg" />
+    <Content Include="Images\glasatlast\GlassTable\images%284%29.jpeg" />
+    <Content Include="Images\glasatlast\GlassTable\images%285%29.jpeg" />
+    <Content Include="Images\glasatlast\GlassTable\images%286%29.jpeg" />
+    <Content Include="Images\glasatlast\GlassTable\images%287%29.jpeg" />
+    <Content Include="Images\glasatlast\GlassTable\images.jpeg" />
+    <Content Include="Images\glasatlast\KalakachiGlass\images%281%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\KalakachiGlass\images%281%29.jpeg" />
+    <Content Include="Images\glasatlast\KalakachiGlass\images%282%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\KalakachiGlass\images%282%29.jpeg" />
+    <Content Include="Images\glasatlast\KalakachiGlass\images%283%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\KalakachiGlass\images%283%29.jpeg" />
+    <Content Include="Images\glasatlast\KalakachiGlass\images-tn.jpeg" />
+    <Content Include="Images\glasatlast\KalakachiGlass\images.jpeg" />
+    <Content Include="Images\glasatlast\Office works\images %281%29.jpeg" />
+    <Content Include="Images\glasatlast\Office works\images %282%29.jpeg" />
+    <Content Include="Images\glasatlast\Office works\images %283%29.jpeg" />
+    <Content Include="Images\glasatlast\Office works\images %284%29.jpeg" />
+    <Content Include="Images\glasatlast\Office works\images %285%29.jpeg" />
+    <Content Include="Images\glasatlast\Office works\images.jpeg" />
+    <Content Include="Images\glasatlast\OnewayGlass\images%281%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\OnewayGlass\images%281%29.jpeg" />
+    <Content Include="Images\glasatlast\OnewayGlass\images%282%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\OnewayGlass\images%282%29.jpeg" />
+    <Content Include="Images\glasatlast\OnewayGlass\images%283%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\OnewayGlass\images%283%29.jpeg" />
+    <Content Include="Images\glasatlast\OnewayGlass\images%284%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\OnewayGlass\images%284%29.jpeg" />
+    <Content Include="Images\glasatlast\OnewayGlass\images%285%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\OnewayGlass\images%285%29.jpeg" />
+    <Content Include="Images\glasatlast\OnewayGlass\images%286%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\OnewayGlass\images%286%29.jpeg" />
+    <Content Include="Images\glasatlast\OnewayGlass\images-tn.jpeg" />
+    <Content Include="Images\glasatlast\OnewayGlass\images.jpeg" />
+    <Content Include="Images\glasatlast\PlaneMirrors\images %281%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\PlaneMirrors\images %281%29.jpeg" />
+    <Content Include="Images\glasatlast\PlaneMirrors\images %282%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\PlaneMirrors\images %282%29.jpeg" />
+    <Content Include="Images\glasatlast\PlaneMirrors\images %283%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\PlaneMirrors\images %283%29.jpeg" />
+    <Content Include="Images\glasatlast\PlaneMirrors\images-tn.jpeg" />
+    <Content Include="Images\glasatlast\PlaneMirrors\images.jpeg" />
+    <Content Include="Images\glasatlast\planglass\images%281%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\planglass\images%281%29.jpeg" />
+    <Content Include="Images\glasatlast\planglass\images%282%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\planglass\images%282%29.jpeg" />
+    <Content Include="Images\glasatlast\planglass\images%283%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\planglass\images%283%29.jpeg" />
+    <Content Include="Images\glasatlast\planglass\images-tn.jpeg" />
+    <Content Include="Images\glasatlast\planglass\images.jpeg" />
+    <Content Include="Images\glasatlast\sliding windows\images %281%29.jpeg" />
+    <Content Include="Images\glasatlast\sliding windows\images %282%29.jpeg" />
+    <Content Include="Images\glasatlast\sliding windows\images %283%29.jpeg" />
+    <Content Include="Images\glasatlast\sliding windows\images.jpeg" />
+    <Content Include="Images\glasatlast\spider fitting\images %285%29.jpeg" />
+    <Content Include="Images\glasatlast\spider fitting\images %286%29.jpeg" />
+    <Content Include="Images\glasatlast\spider fitting\images %287%29.jpeg" />
+    <Content Include="Images\glasatlast\spider fitting\images %288%29.jpeg" />
+    <Content Include="Images\glasatlast\TamatarGlass\images%281%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\TamatarGlass\images%281%29.jpeg" />
+    <Content Include="Images\glasatlast\TamatarGlass\images%282%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\TamatarGlass\images%282%29.jpeg" />
+    <Content Include="Images\glasatlast\ToughenedGlass\images%281%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\ToughenedGlass\images%281%29.jpeg" />
+    <Content Include="Images\glasatlast\ToughenedGlass\images%282%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\ToughenedGlass\images%282%29.jpeg" />
+    <Content Include="Images\glasatlast\ToughenedGlass\images%283%29-tn.jpeg" />
+    <Content Include="Images\glasatlast\ToughenedGlass\images%283%29.jpeg" />
+    <Content Include="Images\glasatlast\ToughenedGlass\images-tn.jpeg" />
+    <Content Include="Images\glasatlast\ToughenedGlass\images.jpeg" />
+    <Content Include="Images\glass to glass table\GlasstoGlass %281%29.jpg" />
+    <Content Include="Images\glass to glass table\GlasstoGlass %282%29.jpg" />
+    <Content Include="Images\glass to glass table\GlasstoGlass %283%29.jpg" />
+    <Content Include="Images\glass to glass table\GlasstoGlass %284%29.jpg" />
+    <Content Include="Images\glass to glass table\GlasstoGlass %285%29.jpg" />
+    <Content Include="Images\glass to glass table\GlasstoGlass %286%29.jpg" />
+    <Content Include="Images\GPbgImage.jpg" />
+    <Content Include="Images\ImageGB.jpg" />
+    <Content Include="Images\images\download %282%29-tn.jpeg" />
+    <Content Include="Images\images\download %282%29.jpeg" />
+    <Content Include="Images\images\download %283%29-tn.jpeg" />
+    <Content Include="Images\images\download %283%29.jpeg" />
+    <Content Include="Images\images\download %284%29-tn.jpeg" />
+    <Content Include="Images\images\download %284%29.jpeg" />
+    <Content Include="Images\images\images %285%29-tn.jpeg" />
+    <Content Include="Images\images\images %285%29.jpeg" />
+    <Content Include="Images\images\images-tn.jpeg" />
+    <Content Include="Images\images\images.jpeg" />
+    <Content Include="Images\LoginGlass.jpg" />
+    <Content Include="Images\logo.jpeg" />
+    <Content Include="Images\logoF.png" />
+    <Content Include="Images\Slideshowimages\image-slider-1.jpg" />
+    <Content Include="Images\Slideshowimages\image-slider-2.jpg" />
+    <Content Include="Images\Slideshowimages\image-slider-3.jpg" />
+    <Content Include="Images\Slideshowimages\image-slider-4.jpg" />
+    <Content Include="Images\Slideshowimages\image-slider-5.jpg" />
+    <Content Include="Images\TableTop\Tabletop%281%29-tn.jpg" />
+    <Content Include="Images\TableTop\Tabletop%281%29.jpg" />
+    <Content Include="Images\TableTop\Tabletop%282%29-tn.jpg" />
+    <Content Include="Images\TableTop\Tabletop%282%29.jpg" />
+    <Content Include="Images\TableTop\Tabletop%283%29-tn.jpg" />
+    <Content Include="Images\TableTop\Tabletop%283%29.jpg" />
+    <Content Include="Images\TableTop\Tabletop%284%29-tn.jpg" />
+    <Content Include="Images\TableTop\Tabletop%284%29.jpg" />
+    <Content Include="Script\bootstrap.min.js" />
+    <Content Include="Script\classie.js" />
+    <Content Include="Script\classie-elasticDropdown.js" />
+    <Content Include="Script\iconify.min.js" />
+    <Content Include="Script\jquery.min.js" />
+    <Content Include="Script\lightslider.js" />
+    <Content Include="Script\modernizr.custom.js" />
+    <Content Include="Script\PassValid.js" />
+    <Content Include="Script\selectFx.js" />
+    <Content Include="Script\sweetalert.min.js" />
+    <Content Include="Script\swiper.min.js" />
+    <Content Include="sliderengine\amazingslider-1.css" />
+    <Content Include="sliderengine\amazingslider.js" />
+    <Content Include="sliderengine\arrows-32-32-0.png" />
+    <Content Include="sliderengine\carouselarrows-32-32-1.png" />
+    <Content Include="sliderengine\carouselarrows-32-32-4.png" />
+    <Content Include="sliderengine\carouselarrows-32-32-5.png" />
+    <Content Include="sliderengine\featuredarrow-8-16-0.png" />
+    <Content Include="sliderengine\featuredarrow-8-16-2.png" />
+    <Content Include="sliderengine\froogaloop2.min.js" />
+    <Content Include="sliderengine\html5boxplayer.swf" />
+    <Content Include="sliderengine\html5boxplayer_fullscreen.png" />
+    <Content Include="sliderengine\html5boxplayer_hd.png" />
+    <Content Include="sliderengine\html5boxplayer_playpause.png" />
+    <Content Include="sliderengine\html5boxplayer_playvideo.png" />
+    <Content Include="sliderengine\html5boxplayer_volume.png" />
+    <Content Include="sliderengine\initslider-1.js" />
+    <Content Include="sliderengine\jquery.js" />
+    <Content Include="sliderengine\lightbox-close.png" />
+    <Content Include="sliderengine\lightbox-loading.gif" />
+    <Content Include="sliderengine\lightbox-navnext.png" />
+    <Content Include="sliderengine\lightbox-navprev.png" />
+    <Content Include="sliderengine\lightbox-next.png" />
+    <Content Include="sliderengine\lightbox-pause.png" />
+    <Content Include="sliderengine\lightbox-play.png" />
+    <Content Include="sliderengine\lightbox-playvideo.png" />
+    <Content Include="sliderengine\lightbox-prev.png" />
+    <Content Include="sliderengine\navarrows-28-28-0.png" />
+    <Content Include="sliderengine\navbuttonbgimage-28-28-0.png" />
+    <Content Include="sliderengine\navplaypause-28-28-0.png" />
+    <Content Include="sliderengine\play-32-32-0.png" />
+    <Content Include="sliderengine\playvideo-64-64-0.png" />
+    <Content Include="Styles\animate.css" />
+    <Content Include="Styles\Buynow.css" />
+    <Content Include="Styles\cs-select.css" />
+    <Content Include="Styles\Css-1.css" />
+    <Content Include="Styles\DescriptionCss.css" />
+    <Content Include="Styles\DetailsCSS.css" />
+    <Content Include="Styles\Dropdown.css" />
+    <Content Include="Styles\Input\cs-skin-elastic.css" />
+    <Content Include="Styles\Input\demo.css" />
+    <Content Include="Styles\Input\normalize.css" />
+    <Content Include="Styles\Input\set2.css" />
+    <Content Include="Styles\MirrorCSS.css" />
+    <Content Include="Styles\NewIndexStyleSheet.css" />
+    <Content Include="Styles\OrderCss.css" />
+    <Content Include="Styles\Photocard.css" />
+    <Content Include="Styles\svg.css" />
+    <Content Include="Styles\SVG1.css" />
+    <Content Include="Styles\swiper.min.css" />
+    <Content Include="Styles\swiper3d.min.css" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddCustomer.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="CustomerModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Filter.cs" />
+    <Compile Include="GlassCustomerSignup.cs">
+      <DependentUpon>CustomerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CustomerDetails.cs" />
+    <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\SignUp.cs" />
+    <Compile Include="Models\SIze.cs" />
+    <Compile Include="Models\State.cs" />
+    <Compile Include="ProductDescription.cs">
+      <DependentUpon>CustomerModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <EntityDeploy Include="CustomerModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CustomerModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="CustomerModel.edmx.diagram">
+      <DependentUpon>CustomerModel.edmx</DependentUpon>
+    </Content>
+    <None Include="packages.config" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\GlassProducts.cshtml" />
+    <Content Include="Views\Home\NormalGlasses.cshtml" />
+    <Content Include="Views\Home\OtherGlasses.cshtml" />
+    <Content Include="Views\Home\PlaneGlasses.cshtml" />
+    <Content Include="Views\Account\SignUp.cshtml" />
+    <Content Include="Views\Home\MirrorGlasses.cshtml" />
+    <Content Include="Views\Home\PlaneMirrorDescription.cshtml" />
+    <Content Include="Views\Home\BlackMirrorDescription.cshtml" />
+    <Content Include="Views\Home\BrownMirrorDescription.cshtml" />
+    <Content Include="Views\Account\BuyNow.cshtml" />
+    <Content Include="Views\Account\Details.cshtml" />
+    <Content Include="Views\Home\Orders.cshtml" />
+    <Content Include="Views\Home\FigureGlasses.cshtml" />
+    <Content Include="Views\Home\FishTank.cshtml" />
+    <Content Include="Views\Home\PlaneGlass.cshtml" />
+    <Content Include="Views\Home\BrownGlass.cshtml" />
+    <Content Include="Views\Home\BlackGlass.cshtml" />
+    <Content Include="Views\Home\ExtraClearGlass.cshtml" />
+    <Content Include="Views\Home\OnewayGlass.cshtml" />
+    <Content Include="Views\Home\ToughenedGlass.cshtml" />
+    <Content Include="Views\Home\FancyMandir.cshtml" />
+    <Content Include="Views\Home\TableTop.cshtml" />
+    <Content Include="Views\Home\GlassTable.cshtml" />
+    <Content Include="Views\Home\GlassToGlassPillars.cshtml" />
+    <Content Include="Views\Home\FancyMirrors.cshtml" />
+    <Content Include="Views\Home\TamatarGlass.cshtml" />
+    <Content Include="Views\Home\BajriGlass.cshtml" />
+    <Content Include="Views\Home\ThumpsUpGlass.cshtml" />
+    <Content Include="Views\Home\StarGlass.cshtml" />
+    <Content Include="Views\Home\KalaKachiGlass.cshtml" />
+    <Content Include="Views\Home\AnarkaliGlass.cshtml" />
+    <Content Include="Views\Home\FancyMandirDescription.cshtml" />
+    <Content Include="Views\Home\FancyMandirFancyGlass.cshtml" />
+    <Content Include="Views\Home\WashBasin.cshtml" />
+    <Content Include="Views\Home\FancyMandirShinyGlass.cshtml" />
+    <Content Include="Views\Home\FancyMandirMirrorGlass.cshtml" />
+    <Content Include="Views\Home\FancyMandirDescription2.cshtml" />
+    <Content Include="Views\Home\FancyMandirFancyGlass2.cshtml" />
+    <Content Include="Views\Home\FancyMandirShinyGlass2.cshtml" />
+    <Content Include="Views\Home\FishTank1ft.cshtml" />
+    <Content Include="Views\Home\FishTank2ft.cshtml" />
+    <Content Include="Views\Home\FishTank3ft.cshtml" />
+    <Content Include="Views\Home\FishTank1_5ft.cshtml" />
+    <Content Include="Views\Home\FishTank2_5ft.cshtml" />
+    <Content Include="Views\Home\TableTopBrown.cshtml" />
+    <Content Include="Views\Home\TableTopBlack.cshtml" />
+    <Content Include="Views\Home\TableTopPlane.cshtml" />
+    <Content Include="Views\Home\TableTopPlaneGlass.cshtml" />
+    <Content Include="Views\Home\FancyMirror1.cshtml" />
+    <Content Include="Views\Home\FancyMirror2.cshtml" />
+    <Content Include="Views\Home\FancyMirror3.cshtml" />
+    <Content Include="Views\Home\FancyMirror4.cshtml" />
+    <Content Include="Views\Home\FancyMirror5.cshtml" />
+    <Content Include="Views\Home\FancyMirror6.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Images\glasatlast\WashBasin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53245</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44391/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

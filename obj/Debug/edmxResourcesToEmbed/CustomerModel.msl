@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GlassDatabaseModelStoreContainer" CdmEntityContainer="GlassDatabaseEntities">
+    <EntitySetMapping Name="GlassCustomerSignup">
+      <EntityTypeMapping TypeName="GlassDatabaseModel.GlassCustomerSignup">
+        <MappingFragment StoreEntitySet="GlassCustomerSignup">
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="PhoneNum" ColumnName="PhoneNum" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="BuildNo" ColumnName="BuildNo" />
+          <ScalarProperty Name="Landmark" ColumnName="Landmark" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductDescription">
+      <EntityTypeMapping TypeName="GlassDatabaseModel.ProductDescription">
+        <MappingFragment StoreEntitySet="ProductDescription">
+          <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+          <ScalarProperty Name="OrderImage" ColumnName="OrderImage" />
+          <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="LandMark" ColumnName="LandMark" />
+          <ScalarProperty Name="BuildingNo" ColumnName="BuildingNo" />
+          <ScalarProperty Name="Sqft" ColumnName="Sqft" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="mobileno" ColumnName="mobileno" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="polish" ColumnName="polish" />
+          <ScalarProperty Name="breadth" ColumnName="breadth" />
+          <ScalarProperty Name="length" ColumnName="length" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Pid" ColumnName="Pid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

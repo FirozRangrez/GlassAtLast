@@ -1,0 +1,60 @@
+﻿* {
+    
+    font-family:monospace;
+}
+body {
+    background-color: #ddd !important;
+    height: 100%;
+}
+.MainBox {
+    padding:0px 40px 0px 40px;
+    
+}
+.OrderBox {
+    padding: 10px 20px 20px 20px;
+    background: #fff;
+    display: grid;
+    grid-template-areas: "BD PD";
+    grid-template-columns: repeat(2,1fr);
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+}
+.OrderSbox {
+    font-size:1.4em;
+}
+.OrderSbox label{
+    font-weight:900;
+}
+.ProductHeader {
+    font-size:1.6em;
+    color:red;
+}
+.ProductDetails {
+    display: flex;
+    grid-area: PD;
+}
+.BuyerDetails {
+    display: flex;
+    grid-area: BD;
+}
+.Cart_icon {
+    background-color:#47d6d2;
+    display:grid;
+    grid-template-areas:"CS CT";
+    grid-template-columns:repeat(4,1fr);
+}
+.CartSvg{
+    grid-area:CS;
+    align-self:center;
+    grid-column:2/3;
+}
+.CartText {
+    grid-area: CT;
+    align-self: center;
+    grid-column: 3/4;
+    font-size: 3em;
+    color: black;
+}
+.RightD {
+    display:flex;
+    flex-direction:column;
+}

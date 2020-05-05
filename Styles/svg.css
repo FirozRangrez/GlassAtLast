@@ -1,0 +1,97 @@
+
+#logo {
+    position: absolute;
+}
+
+    #logo path:nth-child(1) {
+        stroke-dasharray: 350px;
+        stroke-dashoffset: 350px;
+        animation: anim 2s ease forwards 1;
+    }
+
+    #logo path:nth-child(2) {
+        stroke-dasharray: 450px;
+        stroke-dashoffset: 450px;
+        animation: anim 2s ease forwards 1;
+    }
+
+    #logo path:nth-child(3) {
+        stroke-dasharray: 320px;
+        stroke-dashoffset: 320px;
+        animation: anim 2s ease forwards 1;
+    }
+
+    #logo path:nth-child(4) {
+        stroke-dasharray: 330px;
+        stroke-dashoffset: 330px;
+        animation: anim 2s ease forwards 1;
+    }
+
+    #logo path:nth-child(5) {
+        stroke-dasharray: 330px;
+        stroke-dashoffset: 330px;
+        animation: anim 2s ease forwards 1;
+    }
+
+    #logo path:nth-child(6) {
+        stroke-dasharray: 330px;
+        stroke-dashoffset: 330px;
+        animation: anim 2s ease forwards 1;
+    }
+
+    #logo path:nth-child(7) {
+        stroke-dasharray: 330px;
+        stroke-dashoffset: 330px;
+        animation: anim 2s ease forwards 1;
+    }
+
+    #logo path:nth-child(8) {
+        stroke-dasharray: 330px;
+        stroke-dashoffset: 330px;
+        animation: anim 2s ease forwards 1;
+    }
+
+    #logo path:nth-child(9) {
+        stroke-dasharray: 330px;
+        stroke-dashoffset: 330px;
+        animation: anim 2s ease forwards 1;
+    }
+
+    #logo path:nth-child(10) {
+        stroke-dasharray: 360px;
+        stroke-dashoffset: 360px;
+        animation: anim 2s ease forwards 1;
+    }
+
+    #logo path:nth-child(11) {
+        stroke-dasharray: 310px;
+        stroke-dashoffset: 310px;
+        animation: anim 2s ease forwards 1;
+    }
+
+    #logo path:nth-child(12) {
+        stroke-dasharray: 310px;
+        stroke-dashoffset: 310px;
+        animation: anim 2s ease forwards 1;
+    }
+
+@keyframes anim {
+    0% {
+        fill: transparent;
+    }
+
+    50% {
+        fill: transparent;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        fill: white;
+    }
+}
+
+@media screen and (max-width:360px) {
+    #logo {
+        display: none;
+    }
+}

@@ -1,0 +1,220 @@
+﻿* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+.dropbtn {
+    background-color: #47d6d2;
+    color: white;
+    padding: 28px 22px;
+    font-size: 16px;
+    border: none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transition:0.3s;
+    border-radius:50px;
+}
+.Buttons {
+    padding:20px;
+}
+.dropbtn:hover {
+    box-shadow: 0px 8px 16px 10px rgba(0,0,0,0.2);
+}
+   
+.dropdown {
+    position: relative;
+    display: flex;
+}
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+    .dropdown-content a {
+        color: black;
+        padding: 4px;
+        text-decoration: none;
+        display: block;
+    }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+.dropdown:hover .dropdown-content {
+    display:block;
+    padding:1px;
+}
+.dropdown:hover .dropbtn {
+    background-color: #47d6d2;
+}
+.SignUpcontainer {
+    background: #d0d6d6;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    font-size: 22px;
+    margin-left: 30%;
+    margin-right: 30%;
+    border:solid white;
+    border:0px;
+    border-radius:10px;
+}
+.SignUpcontainer span {
+    margin: 0 auto;
+}
+    .SignUpcontainer h4 {
+        color:white;
+        margin-top:20px;
+    }
+.SignUP {
+    border-bottom: 10px solid #7ac2c0;
+    padding: 10px;
+    background-color: darkcyan;
+    border-radius: 10px 10px 0px 0px;
+}
+
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+    input [type='radio'] {
+            --active: #47d6d2;
+            --active-inner: #fff;
+            --focus: 2px rgba(39, 94, 254, .3);
+            --border: #BBC1E1;
+            --border-hover: #275EFE;
+            --background: #fff;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            height: 21px;
+            outline: none;
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            margin: 0;
+            cursor: pointer;
+            border: 1px solid var(--bc, var(--border));
+            background: var(--b, var(--background));
+            -webkit-transition: background .3s, border-color .3s, box-shadow .2s;
+            transition: background .3s, border-color .3s, box-shadow .2s;
+        }
+
+            input[type='radio']:after {
+                content: '';
+                display: block;
+                left: 0;
+                top: 0;
+                position: absolute;
+                transition: opacity var(--d-o, 0.2s), -webkit-transform var(--d-t, 0.3s) var(--d-t-e, ease);
+                transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+                transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s), -webkit-transform var(--d-t, 0.3s) var(--d-t-e, ease);
+            }
+
+            input[type='radio']:checked {
+                --b: var(--active);
+                --bc: var(--active);
+                --d-o: .3s;
+                --d-t: .6s;
+                --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+            }
+
+            input[type='radio']:focus {
+                box-shadow: 0 0 0 var(--focus);
+            }
+
+            input[type='radio']:not(.switch) {
+                width: 21px;
+            }
+
+                input[type='radio']:not(.switch):after {
+                    opacity: var(--o, 0);
+                }
+
+                input[type='radio']:not(.switch):checked {
+                    --o: 1;
+                }
+
+            input[type='radio'] + label {
+                font-size: 14px;
+                line-height: 21px;
+                vertical-align: top;
+                cursor: pointer;
+                margin-left: 4px;
+            }
+
+        input[type='radio'] {
+            border-radius: 50%;
+        }
+
+            input[type='radio']:after {
+                width: 19px;
+                height: 19px;
+                border-radius: 50%;
+                background: var(--active-inner);
+                opacity: 0;
+                -webkit-transform: scale(var(--s, 0.7));
+                transform: scale(var(--s, 0.7));
+            }
+
+            input[type='radio']:checked {
+                --s: .5;
+            }
+    }
+
+    .RBul {
+    list-style: none;
+    width: 100%;
+    display:flex;
+
+}
+     .RBul li {
+            margin: 10px auto;
+            justify-content: center;
+            align-items: center;
+        }
+/*End od radio button*/
+
+#pswd_info {
+    padding: 15px;
+    font-size: .875em;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px #ccc;
+    border: 1px solid #ddd;
+}
+
+    #pswd_info h4 {
+        margin: 0 0 10px 0;
+        padding: 0;
+        font-weight: normal;
+    }
+
+    #pswd_info::before {
+        content: "\25B2";
+        font-size: 14px;
+        line-height: 14px;
+        color: #ddd;
+        text-shadow: none;
+    }
+
+.passwordbox {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+    .passwordbox span li {
+        margin: auto;
+    }
+.invalid {
+    background: url(../images/invalid.png) no-repeat 0 50%;
+    padding-left: 22px;
+    line-height: 24px;
+    color: #ec3f41;
+}
+
+.valid {
+    background: url(../images/valid.png) no-repeat 0 50%;
+    padding-left: 22px;
+    line-height: 24px;
+    color: #3a7d34;
+}

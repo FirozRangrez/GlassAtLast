@@ -1,0 +1,49 @@
+﻿* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.BuynowContent {
+    display:grid;
+    grid-template-areas:"PD PD PD PD " "CD CD CD CD" "BD BD BD BD";
+    grid-template-columns:repeat(12,1fr);
+    font-size:1.3em;
+    grid-row-gap:10px;
+}
+.PersonalDetails1 {
+    grid-area: PD;
+    grid-column: 3/11;
+}
+.ContactingDetails {
+    grid-area: CD;
+    grid-column: 3/11;
+    grid-row:3/4;
+}
+.BuyingDetails {
+    grid-area: BD;
+    grid-column: 3/11;
+    grid-row:5/6;
+}
+.Header{
+    font-size:1.4em;
+    background-color:#ccc;
+    text-align:center;
+    padding:6px;
+    border-bottom:4px solid white;
+}
+.Box {
+    padding:6px;
+    font-weight:500;
+    background:#ddd;
+}
+.Continuebutton {
+    border:0;
+    padding:5px;
+    font-size:1.2em;
+    color:#47d6d2;
+    cursor:pointer;
+}
+.Continuebutton:hover {
+    color:black;
+    background-color:#ccc;
+}

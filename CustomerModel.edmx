@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="GlassDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="GlassCustomerSignup">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mail" Type="nvarchar" MaxLength="100" />
+          <Property Name="PhoneNum" Type="nvarchar" MaxLength="10" />
+          <Property Name="Password" Type="nvarchar" MaxLength="10" />
+          <Property Name="BuildNo" Type="nvarchar" MaxLength="30" />
+          <Property Name="Landmark" Type="nvarchar" MaxLength="30" />
+          <Property Name="State" Type="nvarchar" MaxLength="100" />
+          <Property Name="Pincode" Type="int" />
+          <Property Name="City" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="ProductDescription">
+          <Key>
+            <PropertyRef Name="Pid" />
+          </Key>
+          <Property Name="Pid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="50" />
+          <Property Name="length" Type="nvarchar" MaxLength="10" />
+          <Property Name="breadth" Type="nvarchar" MaxLength="10" />
+          <Property Name="polish" Type="nvarchar" MaxLength="10" />
+          <Property Name="TotalPrice" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="mobileno" Type="nvarchar" MaxLength="10" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="20" />
+          <Property Name="Sqft" Type="nvarchar" MaxLength="20" />
+          <Property Name="BuildingNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="LandMark" Type="nvarchar" MaxLength="20" />
+          <Property Name="State" Type="nvarchar" MaxLength="20" />
+          <Property Name="City" Type="nvarchar" MaxLength="20" />
+          <Property Name="Pincode" Type="nvarchar" MaxLength="20" />
+          <Property Name="OrderImage" Type="nvarchar" MaxLength="100" />
+          <Property Name="ProductType" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityContainer Name="GlassDatabaseModelStoreContainer">
+          <EntitySet Name="GlassCustomerSignup" EntityType="Self.GlassCustomerSignup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProductDescription" EntityType="Self.ProductDescription" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GlassDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="GlassCustomerSignup">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNum" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="BuildNo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Landmark" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Pincode" Type="Int32" />
+          <Property Name="City" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="GlassDatabaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="GlassCustomerSignup" EntityType="Self.GlassCustomerSignup" />
+          <EntitySet Name="ProductDescription" EntityType="GlassDatabaseModel.ProductDescription" />
+        </EntityContainer>
+        <EntityType Name="ProductDescription">
+          <Key>
+            <PropertyRef Name="Pid" />
+          </Key>
+          <Property Name="Pid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="length" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="breadth" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="polish" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="TotalPrice" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mobileno" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Sqft" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="BuildingNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="LandMark" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Pincode" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="OrderImage" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ProductType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GlassDatabaseModelStoreContainer" CdmEntityContainer="GlassDatabaseEntities">
+          <EntitySetMapping Name="GlassCustomerSignup">
+            <EntityTypeMapping TypeName="GlassDatabaseModel.GlassCustomerSignup">
+              <MappingFragment StoreEntitySet="GlassCustomerSignup">
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="PhoneNum" ColumnName="PhoneNum" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="BuildNo" ColumnName="BuildNo" />
+                <ScalarProperty Name="Landmark" ColumnName="Landmark" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductDescription">
+            <EntityTypeMapping TypeName="GlassDatabaseModel.ProductDescription">
+              <MappingFragment StoreEntitySet="ProductDescription">
+                <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+                <ScalarProperty Name="OrderImage" ColumnName="OrderImage" />
+                <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="LandMark" ColumnName="LandMark" />
+                <ScalarProperty Name="BuildingNo" ColumnName="BuildingNo" />
+                <ScalarProperty Name="Sqft" ColumnName="Sqft" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="mobileno" ColumnName="mobileno" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+                <ScalarProperty Name="polish" ColumnName="polish" />
+                <ScalarProperty Name="breadth" ColumnName="breadth" />
+                <ScalarProperty Name="length" ColumnName="length" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="Pid" ColumnName="Pid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

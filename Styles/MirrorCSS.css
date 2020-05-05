@@ -1,0 +1,46 @@
+﻿body {
+}
+.SlideshowContainer {
+    display:flex;
+    justify-content:space-between;
+    
+}
+    .SlideshowContainer div {
+        margin: 0 auto;
+    }
+.SBox1, .SBox2, .SBox3, .SBox4, .SBox5, .SBox6 {
+    border-left: 2px solid #267574;
+    border-right: 2px inset #267574;
+    font-size: 1.2em;
+}
+.cal {
+    display: flex;
+    flex-direction: column;
+}
+.ProductHeader1 {
+    border-left: 10px solid red;
+    border-right: 10px solid red;
+    font-size: 1.6em;
+    text-align: center;
+    background:#ddd;
+    padding-bottom:5px;
+
+}
+.Plabel label {
+    font-weight:900;
+}
+.Plabel {
+    background: #47d6d2;
+    color: white;
+    padding: 5px;
+    border-bottom: 5px solid #267574;
+}
+.Description {
+    padding:10px 10px 0 10px;
+}
+.PriceTag {
+    background: #47d6d2;
+    color: black;
+    padding: 5px;
+    border-bottom: 5px solid #267574;
+}

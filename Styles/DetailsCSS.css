@@ -1,0 +1,306 @@
+﻿* {
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+body {
+    background: url('../Images/LoginGlass.jpg') right repeat;
+}
+.Detailbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:10px;
+}
+.InnerBox {
+    background: #ddd;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+    .InnerBox h3 {
+        align-items:center;
+        justify-content:center;
+        margin: 0 auto;
+    }
+.Details, .Details span {
+    display: flex;
+    flex-direction: column;
+}
+    .Details label {
+        background: #ddd;
+    }
+     .Details span {
+        padding: 5px;
+    }
+
+.input {
+    font-size:100%;
+}
+.gate {
+    cursor:no-drop;
+}
+.PersonalDetails{
+    /*border:1px solid red;*/
+}
+.gateGender {
+    margin-top:15px;
+}
+.GenderDiv ul {
+    list-style-type: none;
+    display: flex;
+}
+    .GenderDiv ul li {
+    }
+.Box_1 {
+    display:flex;
+}
+
+.Gender {
+    background-color: #377D6A;
+    padding: 10px 15px;
+    border-radius: 3px;
+    margin-top:5px;
+    color:white;
+}
+.row {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 30px;
+    background: #032429;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+    .row:before {
+        position: absolute;
+        content: "";
+        display: block;
+        top: 0;
+        left: -5000px;
+        height: 100%;
+        width: 15000px;
+        z-index: -1;
+        background: inherit;
+    }
+
+    
+
+    .row span {
+        position: relative;
+        display: inline-block;
+        margin: 30px 10px;
+    }
+.gate {
+    display: inline-block;
+    width: 415px;
+    padding: 10px 0 10px 15px;
+    font-weight: 400;
+    color: #377D6A;
+    background: #efefef;
+    border: 0;
+    border-radius: 3px;
+    outline: 0;
+    text-indent: 145px;
+    transition: all .3s ease-in-out;
+    font-size:100%;
+}
+.gateName {
+    text-indent:60px;
+    width:200px;
+}
+.gateMail {
+    text-indent:50px;
+}
+.gateMobile {
+    text-indent:125px;
+}
+.gateBuild {
+    text-indent: 135px;
+}
+.gateLand {
+    text-indent:90px;
+}
+.gateState {
+    text-indent: 55px;
+}
+.gatePin{
+    text-indent:70px;
+}
+.gatePass {
+    text-indent:80px;
+}
+    .gate::-webkit-input-placeholder {
+        color: #efefef;
+        text-indent: 0;
+        font-weight: 300;
+    }
+
+    .gate + label {
+        display: inline-block;
+        position: absolute;
+        color:white;
+        padding: 12px 15px;
+        text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
+        background: #7AB893;
+        transition: all .4s ease-in-out;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        transform-origin: left bottom;
+        z-index: 99;
+    }
+
+        .gate + label:before, .gate + label:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 3px;
+            background: #377D6A;
+            transform-origin: left bottom;
+            transition: all .4s ease-in-out;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .gate + label:before {
+            background: rgba(3, 36, 41, 0.2);
+            z-index: -2;
+            right: 20%;
+        }
+.Edit {
+    display: flex;
+    padding: 8px;
+}
+.Editsvg {
+    display:flex
+}
+.EditButton {
+    border: 0;
+    background-color: white;
+    color: black;
+    font-weight: 400;
+    display: flex;
+}
+.SVG:hover {
+}
+.EditButton:hover {
+    /*transition:0.3s;*/
+    background-color: #47d6d2;
+    color: white;
+    cursor: pointer;
+    fill: white !important;
+}
+.gate:focus,
+.gate:active {
+    color: #377D6A;
+    text-indent: 0;
+    background: #fff;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+    .gate:focus::-webkit-input-placeholder,
+    .gate:active::-webkit-input-placeholder {
+        color: #aaa;
+    }
+
+    .gate:focus + label,
+    .gate:active + label {
+        transform: rotate(-66deg);
+        border-radius: 3px;
+    }
+
+        .gate:focus + label:before,
+        .gate:active + label:before {
+            transform: rotate(10deg);
+        }
+.ul li{
+    padding:10px;
+}
+.gateM {
+    text-indent:60px;
+}
+.gateMo {
+    text-indent:150px;
+}
+.gateBN {
+    text-indent:160px;
+}
+.gatePN {
+    text-indent:90px;
+}
+.gateST {
+    text-indent:70px;
+}
+.gatePro {
+    text-indent:150px;
+}
+.gatesqft {
+    text-indent:80px;
+}
+.gatePL {
+    text-indent:100px;
+}
+.gateTo {
+    text-indent:90px;
+}
+.Button3 {
+    display: grid !important;
+    grid-template-areas:"SB HB";
+    grid-template-columns: repeat(2,1fr);
+    justify-items:center;
+    align-items:center;
+}
+.SubmitButton {
+    grid-area: SB;
+    border: 0;
+    padding: 10px;
+    color: black;
+    cursor: no-drop;
+    width: 100%;
+    font-size: 1.2em;
+    background-color:ButtonFace;
+}
+.HomeButton {
+    grid-area: HB;
+    background-color: ButtonFace;
+    border: 0;
+    padding: 10px;
+    color: black;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+    .HomeButton:hover {
+        background-color:#47d6d2;
+        color:white;
+    }
+
+.SubmitButton:hover {
+    background-color: #47d6d2;
+    color: white;
+}
+.Pass {
+    display: grid !important;
+    grid-template-areas: "s T";
+    grid-template-columns: 10% 1fr;
+    position: relative;
+    cursor: pointer;
+}
+#showPass {
+    grid-area: s;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    margin-left:10px;
+}
+.Text {
+    grid-area:T;
+}
